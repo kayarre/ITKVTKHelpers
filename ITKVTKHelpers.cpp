@@ -265,7 +265,10 @@ void CreateVectorImageFromStructuredGridArray(vtkStructuredGrid* const structure
     {
       for(vtkIdType component = 0; component < dataArray->GetNumberOfComponents(); ++component)
       {
+      for(vtkIdType component = 0; component < dataArray->GetNumberOfComponents(); ++component)
+        {
         p[component] = 0;
+        }
       }
     }
 
