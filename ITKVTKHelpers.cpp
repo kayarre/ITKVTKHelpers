@@ -242,7 +242,7 @@ void CreateVectorImageFromStructuredGridArray(vtkStructuredGrid* const structure
 
   while(!imageIterator.IsAtEnd())
     {
-    int queryPoint[3] = {imageIterator.GetIndex()[0], imageIterator.GetIndex()[1], 0};
+    int queryPoint[3] = {static_cast<int>(imageIterator.GetIndex()[0]), static_cast<int>(imageIterator.GetIndex()[1]), 0};
     vtkIdType pointId = vtkStructuredData::ComputePointId(dimensions, queryPoint);
 
     FloatVectorImageType::PixelType p;
@@ -300,7 +300,7 @@ void CreateScalarImageFromStructuredGridArray(vtkStructuredGrid* const structure
 
   while(!imageIterator.IsAtEnd())
     {
-    int queryPoint[3] = {imageIterator.GetIndex()[0], imageIterator.GetIndex()[1], 0};
+    int queryPoint[3] = {static_cast<int>(imageIterator.GetIndex()[0]), static_cast<int>(imageIterator.GetIndex()[1]), 0};
     vtkIdType pointId = vtkStructuredData::ComputePointId(dimensions, queryPoint);
 
     FloatScalarImageType::PixelType p;
