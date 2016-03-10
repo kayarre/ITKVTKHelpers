@@ -134,7 +134,7 @@ void ITKVectorImageToVTKImageFromDimension(const itk::VectorImage<TPixel, 2>* co
 
 template <typename TImage>
 void ITKImageToVTKRGBImage(const TImage* const image,
-                           vtkImageData* const outputImage, const bool alreadyInitialized = false)
+                           vtkImageData* const outputImage, const bool alreadyInitialized)
 {
   throw std::runtime_error("Can't conver a scalar image to an RGB image!");
 }
